@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="head">
+            <img src="img/logo.png " alt="logo">
+            <div class="h-split animate__animated animate__lightSpeedInRight">
+                <div class="h-text">
+                    <h1 class="h-title">
+                        С помощью нас Вы сможете создать то, о чем</h1>
+                    <span class="h-span">Желаете!</span>
+                    <p class="h-text">Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в вас! И знаем это на все 100%. Вас не остановить!</p>
+                <a href class="btn">Узнать больше...</a>
+                </div>
+                <img class="img animate__animated animate__backInLeft" src="img/header-img.png" alt="mobila" >
+            </div>    
+            </div>
+             
+        </div>
+
+        <div class="mid1">
+            <div class="mid11">
+                <h2>Что Вам необходимо?</h2>
+            </div>
+            <div class="mid12">
+                <div class="mid121">
+                    <img src="img/f3.png" alt="pic1">
+                    <h3 class="mid-h">Первый блок</h3>
+                    <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="mid122">
+                    <img src="img/f4.png" alt="pic2">
+                    <h3 class="mid-h">Второй блок</h3>
+                    <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>                   
+                </div>
+                <div class="mid123">
+                    <img src="img/f5.png" alt="pic3">
+                    <h3 class="mid-h">Третий блок</h3>
+                    <p class="Lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>                  
+                </div>  
+            </div>
+        </div>
+
+
+        <div class="midl" id="midk">
+            <div class="left_s" id="left_s">
+                <h2>Форма заказа продукта или услуги</h2>
+                 <select class="form-control" name="Product" id="Product" >
+                    <h5>Выберите необходимый продукт или услугу:</h5>
+                    <option>Продукт 1</option>
+                    <option>Продукт 2</option>
+                    <option>Продукт 3</option>
+                    <option>Услуга 1</option>
+                    <option>Услуга 2</option>
+                    <option>Услуга 3</option>
+                </select>
+                <div class="trai">Укажите необходимое количество товара:</div>
+                <input class="text-input" type="number" id="Count" onchange="checkCount();">
+                <div class="check"><span id="count_Check"></span></div>
+                <div class="trai">Укажите адрес доставки:</div>
+                <input class="text-input" type="text" id="Addr" onchange="checkAddress();" placeholder="г. Город, ул. Улица, д. Дом">                    <div class="check"><span id="addr_Check"></span></div>
+                <div class="trai">Выберите способ оплаты:</div>
+                <select class="form-control" name="Paym" id="Paym" onchange="checkData();">                        
+                    <option>Баланс сайта</option>
+                    <option>Карта 1</option>
+                    <option>Карта 2</option>
+                    <option>Новая карта</option>
+                </select>
+                <div class="Data">
+                    <div class="trai">Укажите номер карты:</div>
+                    <input class="text-input" required type="tel" id="Card_name" onchange="checkCard()" placeholder="0000 0000 0000 0000">
+                    <div class="check"><span id="card_Check"></span></div>
+                    <div class="trai">Укажите cvv карты:</div>
+                    <input class="text-input" type="tel" id="cvv" onchange="checkCvv();" placeholder="000">
+                    <div class="check"><span id="cvv_Check"></span></div>
+                    <div class="trai">Укажите владельца карты:</div>
+                    <input class="text-input" type="text" id="User" onchange="checkUser();" placeholder="Ivan Ivanov" >
+                    <div class="check"><span id="user_Check"></span></div>
+                </div>
+                <div class="col-md-12 order"><span id="sendOrder" onclick="outputData(); buttonColor(); buttonText();">Оформить заказ</span>
+            </div>
+            <div class="right_s" id="right_s">
+                <h2>Информация о заказе</h2>
+                <span id="summary"></span>
+            </div>
+                
+        </div>
+        
+
+        <div class="mid2">
+            <h2 class="m2-header">Форма заказа обратного звонка</h2>
+            <input class="text-inp" name="Name" placeholder="Имя" required minlength="2" maxlength="20">
+            <input class="text-inp" type="email" placeholder="Введите свой E-mail(example@ex.ex)" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+            <input class="text-inp" type="tel" placeholder="Телефон(+70000000000)" required min="11" max="15">
+            <input class="text-inp" type="text" placeholder="Какая тема вас интересует?" required maxlength="150">
+            <input class="submit" type="submit" value="Отправить вопрос!">
+        </div>
+
+        <div class="tail">
+            <p>© Всё на этом сайте защищено</p>
+        </div>
+    </header>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
